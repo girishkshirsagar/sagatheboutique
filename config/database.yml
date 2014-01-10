@@ -20,8 +20,22 @@ test:
   pool: 5
   timeout: 5000
 
-production:
-  adapter: sqlite3
-  database: db/production.sqlite3
+qa:
+  adapter: mysql2
+  database: d8bd5l9h2bg16l
+  username : rebhbxqpaujgfd
+  password : K0MFWT8sA63BnWgOo4jCW
   pool: 5
   timeout: 5000
+  host : ec2-174-129-197-200.compute-1.amazonaws.com
+  port : 5432
+
+production:
+  adapter: mysql2
+  database: d8bd5l9h2bg16l
+  username : rebhbxqpaujgfd
+  password : K0MFWT8sA63BnWgOo4jCW
+  pool: 5
+  timeout: 5000
+  host : ec2-174-129-197-200.compute-1.amazonaws.com
+  port : 5432
