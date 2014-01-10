@@ -21,7 +21,7 @@ test:
   timeout: 5000
 
 qa:
-  adapter: mysql2
+  adapter: postgresql
   database: d8bd5l9h2bg16l
   username : rebhbxqpaujgfd
   password : K0MFWT8sA63BnWgOo4jCW
@@ -31,7 +31,7 @@ qa:
   port : 5432
 
 production:
-  adapter: mysql2
+  adapter: postgresql
   database: d8bd5l9h2bg16l
   username : rebhbxqpaujgfd
   password : K0MFWT8sA63BnWgOo4jCW
