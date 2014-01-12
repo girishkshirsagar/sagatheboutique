@@ -38,7 +38,9 @@ MyStore::Application.routes.draw do
   #     resources :comments, :sales
   #     resource :seller
   #   end
-
+ namespace :spree do
+  resources :content
+ end
   # Example resource route with more complex sub-resources:
   #   resources :products do
   #     resources :comments
