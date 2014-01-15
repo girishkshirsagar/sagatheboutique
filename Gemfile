@@ -6,7 +6,7 @@ gem 'mysql2'
 # Use sqlite3 as the database for Active Record
 ruby '2.0.0'
 group :production, :qa do
-  #gem 'pg'
+  gem 'pg'
   gem 'rails_12factor'
 end
 # Use SCSS for stylesheets
