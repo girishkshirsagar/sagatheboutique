@@ -12,6 +12,17 @@ GIT
       spree_frontend (~> 2.1.0)
 
 GIT
+  remote: https://github.com/spree/spree_fancy.git
+  revision: 43b746cdeedde446737ded108f3b76395d3c7b8b
+  branch: 2-1-stable
+  specs:
+    spree_fancy (2.1.0)
+      compass-rails (~> 1.1.2)
+      deface (~> 1.0.0rc3)
+      jquery-ui-rails
+      spree_core (~> 2.1.0)
+
+GIT
   remote: https://github.com/spree/spree_gateway.git
   revision: 04c51e6bd24e1ea70a548dd12934db98032235ec
   branch: 2-1-stable
@@ -23,11 +34,11 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    actionmailer (4.0.0)
-      actionpack (= 4.0.0)
-      mail (~> 2.5.3)
-    actionpack (4.0.0)
-      activesupport (= 4.0.0)
+    actionmailer (4.0.1)
+      actionpack (= 4.0.1)
+      mail (~> 2.5.4)
+    actionpack (4.0.1)
+      activesupport (= 4.0.1)
       builder (~> 3.1.0)
       erubis (~> 2.7.0)
       rack (~> 1.5.2)
@@ -43,16 +54,16 @@ GEM
       json (~> 1.7)
       money (< 7.0.0)
       nokogiri (~> 1.4)
-    activemodel (4.0.0)
-      activesupport (= 4.0.0)
+    activemodel (4.0.1)
+      activesupport (= 4.0.1)
       builder (~> 3.1.0)
-    activerecord (4.0.0)
-      activemodel (= 4.0.0)
+    activerecord (4.0.1)
+      activemodel (= 4.0.1)
       activerecord-deprecated_finders (~> 1.0.2)
-      activesupport (= 4.0.0)
+      activesupport (= 4.0.1)
       arel (~> 4.0.0)
     activerecord-deprecated_finders (1.0.3)
-    activesupport (4.0.0)
+    activesupport (4.0.1)
       i18n (~> 0.6, >= 0.6.4)
       minitest (~> 4.2)
       multi_json (~> 1.3)
@@ -76,6 +87,7 @@ GEM
     cancan (1.6.10)
     canonical-rails (0.0.3)
       rails (>= 3.1, < 5.0)
+    chunky_png (1.2.9)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.3)
@@ -88,6 +100,12 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     colorize (0.6.0)
+    compass (0.12.2)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
+    compass-rails (1.1.3)
+      compass (>= 0.12.2)
     deface (1.0.0)
       colorize (>= 0.5.8)
       nokogiri (~> 1.6.0)
@@ -103,6 +121,7 @@ GEM
     erubis (2.7.0)
     execjs (2.0.2)
     ffaker (1.22.1)
+    fssm (0.2.10)
     gyoku (0.4.6)
       builder (>= 2.1.2)
     highline (1.6.20)
@@ -134,7 +153,7 @@ GEM
     minitest (4.7.5)
     money (5.1.1)
       i18n (~> 0.6.0)
-    multi_json (1.8.2)
+    multi_json (1.8.4)
     multi_xml (0.5.5)
     mysql2 (0.3.14)
     nokogiri (1.6.1)
@@ -149,7 +168,6 @@ GEM
       mime-types
     paranoia (2.0.1)
       activerecord (~> 4.0)
-    pg (0.17.1)
     polyamorous (0.6.4)
       activerecord (>= 3.0)
     polyglot (0.3.3)
@@ -158,22 +176,22 @@ GEM
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
-    rails (4.0.0)
-      actionmailer (= 4.0.0)
-      actionpack (= 4.0.0)
-      activerecord (= 4.0.0)
-      activesupport (= 4.0.0)
+    rails (4.0.1)
+      actionmailer (= 4.0.1)
+      actionpack (= 4.0.1)
+      activerecord (= 4.0.1)
+      activesupport (= 4.0.1)
       bundler (>= 1.3.0, < 2.0)
-      railties (= 4.0.0)
+      railties (= 4.0.1)
       sprockets-rails (~> 2.0.0)
     rails_12factor (0.0.2)
       rails_serve_static_assets
       rails_stdout_logging
     rails_serve_static_assets (0.0.2)
     rails_stdout_logging (0.0.3)
-    railties (4.0.0)
-      actionpack (= 4.0.0)
-      activesupport (= 4.0.0)
+    railties (4.0.1)
+      actionpack (= 4.0.1)
+      activesupport (= 4.0.1)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.1.1)
@@ -181,7 +199,8 @@ GEM
       actionpack (>= 3.0)
       activerecord (>= 3.0)
       polyamorous (~> 0.6.0)
-    rdoc (3.12.2)
+    rb-readline (0.5.1)
+    rdoc (4.1.1)
       json (~> 1.4)
     ref (1.0.5)
     sass (3.2.13)
@@ -197,9 +216,9 @@ GEM
       nokogiri (>= 1.4.0)
       nori (~> 1.1.0)
       wasabi (~> 2.5.0)
-    sdoc (0.3.20)
-      json (>= 1.1.3)
-      rdoc (~> 3.10)
+    sdoc (0.4.0)
+      json (~> 1.8)
+      rdoc (~> 4.0, < 5.0)
     select2-rails (3.4.9)
       sass-rails
       thor (~> 0.14)
@@ -272,7 +291,7 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     truncate_html (0.9.2)
-    turbolinks (2.1.0)
+    turbolinks (2.2.0)
       coffee-rails
     tzinfo (0.3.38)
     uglifier (2.4.0)
@@ -294,17 +313,18 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  coffee-rails (~> 4.0.0)
+  coffee-rails (~> 4.0.1)
   jbuilder (~> 1.2)
   jquery-rails
   mysql2
-  pg
-  rails (= 4.0.0)
+  rails (= 4.0.1)
   rails_12factor
-  sass-rails (~> 4.0.0)
+  rb-readline
+  sass-rails (~> 4.0.1)
   sdoc
   spree (= 2.1.3)
   spree_auth_devise!
+  spree_fancy!
   spree_gateway!
   therubyracer
   turbolinks
