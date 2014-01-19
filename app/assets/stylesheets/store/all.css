@@ -10,3 +10,20 @@
  *= require_tree .
  *= require store/spree_fancy
 */
+body {
+  background-color:#000000
+}
+
+ul#products li .product-image img {
+    max-width: 100%;
+    min-height: 275px;
+  }
+
+#product-images #main-image img {
+    min-height: 540px;
+    max-width: 100%;
+}
+
+#main-image img {
+    padding: 0px 0px 0px 0px;
+}
