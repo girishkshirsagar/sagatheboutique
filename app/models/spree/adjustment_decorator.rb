@@ -4,7 +4,7 @@ module Spree
     def calculate_shipping(order)
 
       ship_address = order.shipping_address
-      shipper = { :name => "ship_address.firstname",
+      shipper = { :name => "Nalini Sharma",
                    :company => "Saga",
                    :phone_number => "555-555-5555",
                    :address => "Main Street",
@@ -25,9 +25,12 @@ module Spree
                      :residential => "true" }
 
       packages = []
+      weight = 0.0
+      order.line_items.collect {|x| weight += (x.quantity * x.product.weight.to_f * 2.20)}
+
       packages << {
-        :weight => {:units => "LB", :value => 2},
-        :dimensions => {:length => 10, :width => 5, :height => 4, :units => "IN" }
+        :weight => {:units => "LB", :value => weight},
+        :dimensions => {:length => 15, :width => 10, :height => 5, :units => "IN" }
       }
 
       shipping_options = {

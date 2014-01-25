@@ -19,8 +19,12 @@ module Spree
         render :edit
       end
 
-      adj = @order.adjustments.where(:originator_type => 'Spree::ShippingMethod').first
-      adj.calculate_shipping(@order)
+      unless @order.shipping_address.country.iso == "IN"
+       adj = @order.adjustments.where(:originator_type => 'Spree::ShippingMethod').first
+       adj.calculate_shipping(@order)
+      end
     end
+
   end
+
 end
