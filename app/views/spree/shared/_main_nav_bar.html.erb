@@ -1,6 +1,18 @@
-<nav class="columns sixteen">
-<ul id="main-nav-bar" class="inline" data-hook>
+<nav class="columns sixteen" style="width:700px;">
+<ul id="main-nav-bar" class="inline" data-hook style="width:100%">
     <li id="home-link" data-hook><%= link_to Spree.t(:home), spree.root_path %></li>
-    <li id="link-to-cart" data-hook><%= link_to_cart.gsub('Cart:', 'Shopping Bag:').html_safe %></li>
+    <li data-hook>
+       <%tot = current_order.line_items.collect(&:quantity).sum
+         cart = tot == 0 ? "(EMPTY)" : "(#{tot}) $#{current_order.item_total.to_f}" %>
+       <%= link_to "Shopping Bag: #{cart}", "/cart" %>
+     </li>
+     <li data-hook>   
+       <% if spree_current_user %>
+         <%= link_to "My Account", "/account", {:style => "padding-right:30px;"}%>
+          <%= link_to "Logout", "/logout"%>
+       <% else%>  
+          <%= link_to "Login", "/login"%>
+       <% end%>
+     </li>
   </ul>
 </nav>
