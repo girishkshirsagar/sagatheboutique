@@ -318,6 +318,8 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.1)
+  compass
+  compass-rails
   fedex
   jbuilder (~> 1.2)
   jquery-rails
