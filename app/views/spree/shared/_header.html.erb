@@ -1,0 +1,13 @@
+<header id="header" class="row" data-hook>
+<figure id="logo" class="columns six" data-hook><%= logo %></figure>
+<%= render :partial => 'spree/shared/nav_bar' %>
+<%= render :partial => 'spree/shared/main_nav_bar' if store_menu? %>
+</header>
+
+<div style="background-color:rgb(104, 175, 245);">
+  <% Spree::Taxon.where(:parent_id => 1).each do |cat|%>
+    <span style="font-size:16px;font-weight:600;padding-left:20%">
+      <%= link_to "<span style='color:white'>#{cat.name.upcase}<span>".html_safe, "/t/#{cat.permalink}"%>
+    </span>
+  <%end%>
+<div>
