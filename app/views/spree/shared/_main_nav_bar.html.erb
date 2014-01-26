@@ -2,7 +2,7 @@
 <ul id="main-nav-bar" class="inline" data-hook style="width:100%">
     <li id="home-link" data-hook><%= link_to Spree.t(:home), spree.root_path %></li>
     <li data-hook>
-       <%tot = current_order.line_items.collect(&:quantity).sum
+       <%tot = current_order ? current_order.line_items.collect(&:quantity).sum : 0
          cart = tot == 0 ? "(EMPTY)" : "(#{tot}) $#{current_order.item_total.to_f}" %>
        <%= link_to "Shopping Bag: #{cart}", "/cart" %>
      </li>
