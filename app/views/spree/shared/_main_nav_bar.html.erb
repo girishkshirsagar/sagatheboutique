@@ -15,7 +15,7 @@
        <% end%>
        </li>
        <li>
-         <%#= select_tag 'currency', options_for_select(Spree::Currency.all_currencies, Spree::Currency.current.char_code), :onchange => 'updateCurrency(this)' %>
+         <%= select_tag 'currency', options_for_select(Spree::Currency.all_currencies, Spree::Currency.current.char_code), :onchange => 'updateCurrency(this)' %>
        </li>
   </ul>
   </nav>
