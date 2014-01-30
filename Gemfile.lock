@@ -1,5 +1,5 @@
 GIT
-  remote: http://github.com/pronix/spree-multi-currency.git
+  remote: https://github.com/pronix/spree-multi-currency.git
   revision: 0abaa72ab8edcf1261e5d924176f29495e6c49aa
   specs:
     spree_multi_currency (2.0.0)
