@@ -1,5 +1,5 @@
 <nav class="columns sixteen" style="width:700px;">
-<ul id="main-nav-bar" class="inline" data-hook style="width:100%">
+<ul id="main-nav-bar" class="inline" data-hook style="width:100%; font-size:10px;">
     <li id="home-link" data-hook><%= link_to Spree.t(:home), spree.root_path %></li>
     <li data-hook>
        <%tot = current_order ? current_order.line_items.collect(&:quantity).sum : 0
@@ -13,6 +13,9 @@
        <% else%>  
           <%= link_to "Login", "/login"%>
        <% end%>
-     </li>
+       </li>
+       <li>
+         <%= select_tag 'currency', options_for_select(Spree::Currency.all_currencies, Spree::Currency.current.char_code), :onchange => 'updateCurrency(this)' %>
+       </li>
   </ul>
-</nav>
+  </nav>
