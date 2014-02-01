@@ -32,7 +32,7 @@ GIT
       spree_core (~> 2.1)
 
 PATH
-  remote: vendor/gems/spree_multi_currency-2.0.0
+  remote: app/gems/spree_multi_currency
   specs:
     spree_multi_currency (2.0.0)
       json (>= 1.5.1)
