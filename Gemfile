@@ -56,3 +56,4 @@ gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git
 #gem 'spree_active_shipping', :git => "https://github.com/spree/spree_active_shipping.git", :branch => "2-1-stable"
 gem 'fedex'
 gem 'rb-readline'
+gem 'oauth2'

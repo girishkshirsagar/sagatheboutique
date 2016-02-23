@@ -1,0 +1,23 @@
+require 'oauth2'
+
+class AuthController < ApplicationController
+
+  def new
+   callback = "http://localhost:3001/auth/callback"
+   app_id = "93cfa465c167932b4dd93048b1293629bc59c767fc82e2ee12e2c7095ae5dbdc"
+   secret = "249611195a067d74029aa068be9f1dbf7c4eb3abfce6ff98fd3e9dd6bed95422"
+   client = OAuth2::Client.new(app_id, secret, {:site => "http://me.timelyapp.dev:3000", :authorize_url  => '/api/v1/oauth/authorize',
+                  :token_url  => '/api/v1/oauth/token',})
+   redirect_to client.auth_code.authorize_url(redirect_uri: callback)
+  end
+
+  def callback
+   callback = "http://localhost:3001/auth/callback"
+   app_id = "93cfa465c167932b4dd93048b1293629bc59c767fc82e2ee12e2c7095ae5dbdc"
+   secret = "249611195a067d74029aa068be9f1dbf7c4eb3abfce6ff98fd3e9dd6bed95422"
+   client = OAuth2::Client.new(app_id, secret, {:site => "http://me.timelyapp.dev:3000", :authorize_url  => '/api/v1/oauth/authorize',
+                  :token_url  => '/api/v1/oauth/token',})
+   access = client.auth_code.get_token(params[:code], redirect_uri: callback)
+   render :text => access.token
+  end
+end
